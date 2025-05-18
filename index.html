@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Aulas Java script</title>
+    <title>Pagina Inicial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 id="ola"></h1> 
+    
+    <div class="container">
+        
+        <h1>Boas Vindas!</h1>
+        <p>Vamos personalizar sua saudação usando Java script</p>
+        <div class="saudacao" id="mensagemSaudacao">Olá , Visitante!</div>
+        <button class="botao" onClick="mudarnome()">Personalizar Saudação</button>
 
-    <script>
-
-        let nome = "Andressa"
-
-document.getElementById("ola").textContent= "Olá " + nome + " , tudo bem com você?"
-
-
-
-
+           
 
 
 
-    </script>
+        </div>
+
+        <script>
+
+function mudarnome() {
+    let nome = "Andressa"
+document.getElementById("mensagemSaudacao").textContent = 
+"Olá, " + nome 
+
+}
+
+
+
+
+
+        </script>
+
+    
 
    
     
