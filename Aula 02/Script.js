@@ -7,9 +7,11 @@ function adicionarTarefa() {
 
     let Tarefa = document.getElementById("InputTarefa")
 
-// aqui pegamos o valor da tarefa adionada
+// aqui obtemos a tarefa adicionada pelo usuário
 
     let NovaTarefa = Tarefa.value
+
+    //adicionamenos a mensagem Tarefa adicionada
 
     document.getElementById("mensagem").textContent = mensagem;
 
@@ -25,7 +27,7 @@ function adicionarTarefa() {
 
     Ul.appendChild(Lista)
 
-   // aqui o campo de lista de tarefas sendo limpa
+   // Aqui limpamos o campo das tarefas adicionadas
    
     Tarefa.value = ""
 
