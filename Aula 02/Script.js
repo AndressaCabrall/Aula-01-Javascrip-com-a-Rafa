@@ -1,41 +1,61 @@
 
 
-// criamos a função adicionar tarefa
+// 01- criamos a função adicionar tarefa para ser acionada com o onclik
 
 function adicionarTarefa() {
-    
-    // criamos a variável que vai dar uma mensagem qdo acionada pelo onclik
 
-    let mensagem = "Tarefa adicionada com sucesso!";
+    // 02- criamos a variável que vai buscar o input no html
 
-    let Tarefa = document.getElementById("InputTarefa")
+    const Tarefa = document.getElementById("InputTarefa")
+    const mensagem = document.getElementById("mensagem")
 
-// aqui obtemos a tarefa adicionada pelo usuário
+    // 03- criamos uma nova variável que pega o valor do input adicionado pelo usuário e armazena seu valor
 
-    let NovaTarefa = Tarefa.value
+    let NovaTarefa = Tarefa.value.trim()
 
-    //adicionamenos a mensagem Tarefa adicionada
+    //04- criamos a condicional de se for isso ou se não for isso (if e else)
 
-    document.getElementById("mensagem").textContent = mensagem;
+    if (NovaTarefa == "") {
 
-//criamos a variável para a lista de tarefas
+        let mensagemErro = "Por favor, adicione uma tarefa válida!";
+        mensagem.textContent = mensagemErro;
+        mensagem.style.color = "red";
+    }
+    else {
+        let mensagemSucesso = "Tarefa adicionada com sucesso!";
+        mensagem.textContent = mensagemSucesso;
+        mensagem.style.color = "green";
+        
 
-    let Ul = document.getElementById("ListaTarefas")
+        //06- criamos a variável para a lista de tarefas
+        const Ul = document.getElementById("ListaTarefas")
 
-    let Lista = document.createElement("li")
+        let Lista = document.createElement("li")
 
-    Lista.textContent = NovaTarefa
+        Lista.textContent = NovaTarefa
+        //07- A lista de tarefas interagindo com a UL
+        Ul.appendChild(Lista)
 
-    //a lista de tarefas interagindo com a UL
+    }
 
-    Ul.appendChild(Lista)
-
-   // Aqui limpamos o campo das tarefas adicionadas
+    // 08- Aqui limpamos o campo das tarefas adicionadas
 
     Tarefa.value = ""
 
 
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
