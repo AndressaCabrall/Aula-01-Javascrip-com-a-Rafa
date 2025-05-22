@@ -1,4 +1,7 @@
+
+
 // criamos a função adicionar tarefa
+
 function adicionarTarefa() {
     
     // criamos a variável que vai dar uma mensagem qdo acionada pelo onclik
@@ -28,15 +31,14 @@ function adicionarTarefa() {
     Ul.appendChild(Lista)
 
    // Aqui limpamos o campo das tarefas adicionadas
-   
+
     Tarefa.value = ""
 
 
+        }
 
 
 
 
 
 
-
-}
